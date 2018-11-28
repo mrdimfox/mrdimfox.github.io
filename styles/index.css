@@ -1,5 +1,5 @@
-@import  "http://weloveiconfonts.com/api/?family=entypo";
-@import  "https://fonts.googleapis.com/css?family=Black+Ops+One|Bungee|Bungee+Inline|Bungee+Shade|Quicksand|Righteous|Space+Mono";
+@import  "//weloveiconfonts.com/api/?family=entypo";
+@import  "//fonts.googleapis.com/css?family=Black+Ops+One|Bungee|Bungee+Inline|Bungee+Shade|Quicksand|Righteous|Space+Mono";
 
 /* entypo */
 [class*="entypo-"]:before {
