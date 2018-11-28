@@ -23,7 +23,6 @@
                 </p>
                 <h2 style="margin-top: 25px;">Для совершения перевода перейти по одной из ссылок:</h2>
                 <p>
-                    <a href="#" id="show-iframe">Открыть в этой вкладке</a> <br>
                     <a href="//www.tinkoff.ru/cardtocard/" target="_blank">Открыть в новой вкладке</a>
                 </p>
                 <p class="open-details"><a href="#" id="open-details">Не пойму, что делать-то?</a></p>
@@ -35,16 +34,6 @@
                         <br> Готово! Ваши <strike>шекели</strike> денежки уже у меня.
                     </p>
                 </div>
-            </div>
-
-            <div class="tinkoff-pay pay-iframe card card-1" id="pay-iframe">
-                <iframe frameborder="0" 
-                      allowtransparency="true" 
-                      scrolling="yes" 
-                      src="//www.tinkoff.ru/cardtocard/" 
-                      width="780" 
-                      height="500">
-                </iframe>
             </div>
         </div>
     </div>
@@ -66,15 +55,6 @@
 
     <script type="text/javascript" src="//zeptojs.com/zepto.min.js"></script>
     <script type="text/javascript">
-        var iframeTurn = $("#show-iframe");
-        var iframe = $("#pay-iframe");
-        var payCard = $("#pay-card")
-
-        iframeTurn.on("click", () => {
-            payCard.css({"display":"none"});
-            iframe.css({"display":"block"});
-        });
-
         var openDetails = $("#open-details");
         var details = $("#details");
         openDetails.on("click", () => {
