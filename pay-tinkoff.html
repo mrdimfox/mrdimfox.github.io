@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Pay some to Dimenterious Fox">
+    <meta name="keywords" content="fox, mrlisdim, dim, lis, lisin, dimenterious, fox, pay, money">
+
+    <title>Pay me some</title>
+
+    <link href="https://maxcdn.icons8.com/iOS7/PNG/25/Very_Basic/contacts_filled-25.png" rel="shortcut icon">
+    
+    <link href="styles/common.css" media="all" rel="stylesheet" type="text/css">
+    <link href="styles/pay.css" media="all" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="center-center-block">
+        <div class="load-wrapper">
+            <div class="tinkoff-pay card card-1" id="pay-card">
+                <h2>Переводить на вот эту карту:</h2>
+                <p>
+                    5244 6873 8798 3736
+                </p>
+                <h2 style="margin-top: 25px;">Для совершения перевода перейти по одной из ссылок:</h2>
+                <p>
+                    <a href="#" id="show-iframe">Открыть в этой вкладке</a> <br>
+                    <a href="https://www.tinkoff.ru/cardtocard/" target="_blank">Открыть в новой вкладке</a>
+                </p>
+                <p class="open-details"><a href="#" id="open-details">Не пойму, что делать-то?</a></p>
+                <div id="details">
+                    <h3 style="margin-top: 25px;">Инструкция для непонятливых</h2>
+                    <p style="font-size: 10pt;">
+                        Чтобы сделать перевод, надо, после перехода по ссылке, слева ввести данные своей банковской карточки,
+                        а справа номер моей. Потом опуститься ниже и ввести сумму (в рублях). После чего жмёте «Перевести».
+                        <br> Готово! Ваши <strike>шекели</strike> денежки уже у меня.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tinkoff-pay pay-iframe card card-1" id="pay-iframe">
+                <iframe frameborder="0" 
+                      allowtransparency="true" 
+                      scrolling="yes" 
+                      src="https://www.tinkoff.ru/cardtocard/" 
+                      width="780" 
+                      height="500">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="conditions-wrapper">
+        <div class="open-conditions">
+            Условия
+        </div>
+        <div class="conditions">
+            Перевод на карту банка Тинькофф (на мою карту, например) с карты любого банка — <strong>без комиссии</strong>.
+            Максимальная сумма онлайн-перевода 75 000 рублей. Подробнее по <a href="https://www.tinkoff.ru/cardtocard/" target="_blank">ссылке</a>.
+        </div>
+    </div>
+    
+    <div class="jew"></div>
+
+    <script type="text/javascript" src="http://zeptojs.com/zepto.min.js"></script>
+    <script type="text/javascript">
+        var iframeTurn = $("#show-iframe");
+        var iframe = $("#pay-iframe");
+        var payCard = $("#pay-card")
+
+        iframeTurn.on("click", () => {
+            payCard.css({"display":"none"});
+            iframe.css({"display":"block"});
+        });
+
+        var openDetails = $("#open-details");
+        var details = $("#details");
+        openDetails.on("click", () => {
+            details.css({"display":"block"});
+            openDetails.css({"display":"none"});
+        });
+    </script>
+</body>
+</html>
