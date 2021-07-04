@@ -1,0 +1,21 @@
+{
+    "name": "vite-template-solid",
+    "version": "0.0.0",
+    "description": "",
+    "homepage": "http://mrdimfox.github.io",
+    "scripts": {
+        "start": "vite",
+        "dev": "vite",
+        "build": "vite build",
+        "deploy": "gh-pages -d build"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "vite": "^2.3.8",
+        "vite-plugin-solid": "^2.0.0"
+    },
+    "dependencies": {
+        "gh-pages": "^3.2.3",
+        "solid-js": "^1.0.0"
+    }
+}
