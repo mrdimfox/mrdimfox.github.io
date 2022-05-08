@@ -24,12 +24,26 @@ jobs:
           echo "::set-output name=tag_name::${TAG_NAME}"
           echo "::set-output name=deploy_tag_name::deploy-${TAG_NAME}"
 
-      - name: Build
-        uses: kelvintaywl/action-jsonresume-export@v1
+      - name: Cache dependencies
+        uses: actions/cache@v2
         with:
-          theme: macchiato
-          resume_filepath: index.json
-          output_filepath: public/index.html
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+        run:
+          npm init
+          npm install resumed jsonresume-theme-even
+
+      - name: Build
+        run: |
+          mkdir public
+          resumed render index.json -o public/index.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
