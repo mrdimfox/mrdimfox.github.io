@@ -30,10 +30,9 @@ jobs:
           node-version: 14
           cache: 'yarn'
 
-      - name: Setup resumed builder
+      - name: Setup builder
         run:
-          npm init
-          npm install resumed jsonresume-theme-even
+          yarn
 
       - name: Build
         run: |
