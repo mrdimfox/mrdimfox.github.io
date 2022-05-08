@@ -1,0 +1,41 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - feature/upgrade  # Set a branch name to trigger deployment
+    tags:
+      - 'v*.*.*'
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Prepare tag
+        id: prepare_tag
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          TAG_NAME="${GITHUB_REF##refs/tags/}"
+          echo "::set-output name=tag_name::${TAG_NAME}"
+          echo "::set-output name=deploy_tag_name::deploy-${TAG_NAME}"
+
+      - name: Build
+        uses: kelvintaywl/action-jsonresume-export@v1
+        with:
+          theme: macchiato
+          resume_filepath: index.json
+          output_filepath: public/index.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          enable_jekyll: false
+          tag_name: ${{ steps.prepare_tag.outputs.deploy_tag_name }}
+          tag_message: 'Deployment ${{ steps.prepare_tag.outputs.tag_name }}'
