@@ -45,7 +45,7 @@ jobs:
           outputFile: ./public/resume.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
-      - name: Deploy
+      - name: Deploy Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -53,3 +53,10 @@ jobs:
           enable_jekyll: false
           tag_name: ${{ steps.prepare_tag.outputs.deploy_tag_name }}
           tag_message: "Deployment ${{ steps.prepare_tag.outputs.tag_name }}"
+
+      - name: 'Upload PDF'
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume.pdf
+          path: ./public/resume.pdf
+          retention-days: 5
