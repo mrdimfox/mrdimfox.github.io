@@ -24,18 +24,11 @@ jobs:
           echo "::set-output name=tag_name::${TAG_NAME}"
           echo "::set-output name=deploy_tag_name::deploy-${TAG_NAME}"
 
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 14
+          cache: 'yarn'
 
       - name: Setup resumed builder
         run:
@@ -45,7 +38,7 @@ jobs:
       - name: Build
         run: |
           mkdir public
-          resumed render index.json -o public/index.html
+          npx resumed render index.json -o public/index.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
