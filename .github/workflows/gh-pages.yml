@@ -1,11 +1,11 @@
-name: GitHub Pages
+name: Deploy Resume
 
 on:
   push:
     branches:
-      - feature/upgrade  # Set a branch name to trigger deployment
+      - feature/upgrade
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
   pull_request:
 
 jobs:
@@ -28,16 +28,22 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14
-          cache: 'yarn'
+          cache: "yarn"
 
       - name: Setup builder
-        run:
-          yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile
 
-      - name: Build
+      - name: Build Pages
         run: |
           mkdir public
           npx resumed render index.json -o public/index.html
+
+      - name: Build PDF
+        uses: fifsky/html-to-pdf-action@master
+        with:
+          htmlFile: ./public/index.html
+          outputFile: ./public/resume.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -46,4 +52,4 @@ jobs:
           publish_dir: ./public
           enable_jekyll: false
           tag_name: ${{ steps.prepare_tag.outputs.deploy_tag_name }}
-          tag_message: 'Deployment ${{ steps.prepare_tag.outputs.tag_name }}'
+          tag_message: "Deployment ${{ steps.prepare_tag.outputs.tag_name }}"
