@@ -5,7 +5,8 @@
     "author": "Lisin D. <mrlisdim@gmail.com>",
     "license": "MIT",
     "dependencies": {
-        "resumed": "1.0.3",
-        "@anthonyjdella/jsonresume-theme-anthonyjdella-rocketspacer": "1.0.0"
+        "@anthonyjdella/jsonresume-theme-anthonyjdella-rocketspacer": "1.0.0",
+        "jsonresume-theme-actual": "^0.1.8",
+        "resumed": "1.0.3"
     }
 }

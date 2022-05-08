@@ -8,6 +8,10 @@ on:
       - "v*.*.*"
   pull_request:
 
+env:
+  HTML_THEME: anthonyjdella-rocketspacer
+  PDF_THEME: actual
+
 jobs:
   deploy:
     runs-on: ubuntu-20.04
@@ -33,15 +37,16 @@ jobs:
       - name: Setup builder
         run: yarn install --frozen-lockfile
 
-      - name: Build Pages
+      - name: Build resume
         run: |
           mkdir public
-          npx resumed render index.json -o public/index.html
+          npx resumed render index.json -o public/index.html -t $HTML_THEME
+          npx resumed render index.json -o public/index.pdf.html -t $PDF_THEME
 
       - name: Build PDF
         uses: fifsky/html-to-pdf-action@master
         with:
-          htmlFile: ./public/index.html
+          htmlFile: ./public/index.pdf.html
           outputFile: ./public/resume.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
