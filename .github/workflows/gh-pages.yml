@@ -36,6 +36,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14
+
+      - name: Setup resumed builder
         run:
           npm init
           npm install resumed jsonresume-theme-even
