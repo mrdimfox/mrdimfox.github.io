@@ -6,6 +6,6 @@
     "license": "MIT",
     "dependencies": {
         "resumed": "1.0.3",
-        "jsonresume-theme-even": "0.17.0"
+        "@anthonyjdella/jsonresume-theme-anthonyjdella-rocketspacer": "1.0.0"
     }
 }
