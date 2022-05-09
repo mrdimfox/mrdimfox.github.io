@@ -8,7 +8,7 @@ on:
 
 env:
   HTML_THEME: stackoverflow
-  PDF_THEME: actual
+  PDF_THEME: stackoverflow
 
 jobs:
   deploy:
@@ -56,6 +56,7 @@ jobs:
           enable_jekyll: false
           tag_name: ${{ steps.prepare_tag.outputs.deploy_tag_name }}
           tag_message: "Deployment ${{ steps.prepare_tag.outputs.tag_name }}"
+          cname: dlisin.tk
 
       - name: 'Upload PDF'
         uses: actions/upload-artifact@v3
