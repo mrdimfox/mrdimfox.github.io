@@ -7,7 +7,7 @@ on:
   pull_request:
 
 env:
-  HTML_THEME: anthonyjdella-rocketspacer
+  HTML_THEME: stackoverflow
   PDF_THEME: actual
 
 jobs:
