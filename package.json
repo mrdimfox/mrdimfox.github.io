@@ -1,0 +1,12 @@
+{
+    "name": "personal-site",
+    "version": "1.0.0",
+    "repository": "git@github.com:mrdimfox/mrdimfox.github.io.git",
+    "author": "Lisin D. <mrlisdim@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "@anthonyjdella/jsonresume-theme-anthonyjdella-rocketspacer": "1.0.0",
+        "jsonresume-theme-actual": "^0.1.8",
+        "resumed": "1.0.3"
+    }
+}
