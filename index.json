@@ -2,12 +2,12 @@
     "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
     "basics": {
         "name": "Dmitrii Lisin",
-        "label": "Software Programmer",
+        "label": "Software Programmer, Embedded Programmer",
         "image": "https://nmtuan.space/jsonresume-theme-rocketspacer/dummy-profile.png",
         "email": "mrlisdim@gmail.com",
         "phone": "8 (999) 529-5331",
         "url": "http://dlisin.tk",
-        "summary": "As I remember myself I was interested in programming. No matter how, where and what for, I used to search any possibility to write some code.",
+        "summary": "TODO",
         "location": {
             "address": "",
             "postalCode": "190000",
@@ -44,10 +44,8 @@
             "position": "Team leader",
             "url": "https://en.thirdpin.io/",
             "startDate": "2020",
-            "summary": "Description…",
-            "highlights": [
-                "Started the company"
-            ]
+            "summary": "Developed a flexible testing system for embedded electronics based on distributed micro-services connected by PubSub/RPC Web-protocol.",
+            "highlights": []
         },
         {
             "name": "LLC \"Third Pin\"",
@@ -55,64 +53,36 @@
             "url": "https://en.thirdpin.io/",
             "startDate": "2013-01-01",
             "endDate": "2020",
-            "summary": "Description…",
-            "highlights": [
-                "Started the company"
-            ]
+            "summary": "Have been finished more than 20 commercial projects in embedded area including IoT, safety systems, shipbuilding.",
+            "highlights": []
         }
     ],
-    "volunteer": [
-        {
-            "organization": "Organization",
-            "position": "Volunteer",
-            "url": "https://organization.com/",
-            "startDate": "2012-01-01",
-            "endDate": "2013-01-01",
-            "summary": "Description…",
-            "highlights": [
-                "Awarded 'Volunteer of the Month'"
-            ]
-        }
-    ],
+    "volunteer": [],
     "education": [
         {
-            "institution": "University",
-            "url": "https://institution.com/",
-            "area": "Software Development",
+            "institution": "ITMO University",
+            "url": "https://en.itmo.ru/",
+            "area": "Intelligent Technologies in Robotics",
+            "studyType": "Master",
+            "startDate": "2016",
+            "endDate": "2018",
+            "gpa": "4.8",
+            "courses": []
+        },
+        {
+            "institution": "ITMO University",
+            "url": "https://en.itmo.ru/",
+            "area": "Intelligent Technologies in Robotics",
             "studyType": "Bachelor",
-            "startDate": "2011-01-01",
-            "endDate": "2013-01-01",
-            "score": "4.0",
-            "courses": [
-                "DB1101 - Basic SQL"
-            ]
+            "startDate": "2012",
+            "endDate": "2016",
+            "gpa": "4.8",
+            "courses": []
         }
     ],
-    "awards": [
-        {
-            "title": "Award",
-            "date": "2014-11-01",
-            "awarder": "Company",
-            "summary": "There is no spoon."
-        }
-    ],
-    "certificates": [
-        {
-            "name": "Certificate",
-            "date": "2021-11-07",
-            "issuer": "Company",
-            "url": "https://certificate.com"
-        }
-    ],
-    "publications": [
-        {
-            "name": "Publication",
-            "publisher": "Company",
-            "releaseDate": "2014-10-01",
-            "url": "https://publication.com",
-            "summary": "Description…"
-        }
-    ],
+    "awards": [],
+    "certificates": [],
+    "publications": [],
     "skills": [
         {
             "name": "Embedded Development",
@@ -124,7 +94,8 @@
                 "STM32",
                 "Nordic",
                 "Real-time protocols",
-                "Industrial protocols"
+                "Industrial protocols",
+                "Stack only programming"
             ]
         },
         {
@@ -134,7 +105,7 @@
                 "FastAPI",
                 "Pydantic",
                 "ORM",
-                "WAMP",
+                "WAMP protocol",
                 "Async",
                 "Threading"
             ]
@@ -163,14 +134,23 @@
             ]
         },
         {
+            "name": "Rust",
+            "level": "Beginner",
+            "keywords": [
+                "Tauri"
+            ]
+        },
+        {
             "name": "Common",
-            "level": "Master",
+            "level": "",
             "keywords": [
                 "VSC",
                 "Gitlab",
                 "Github",
                 "Reviewing",
-                "Linux"
+                "Linux",
+                "Reading schematics",
+                "Datasheet exploring"
             ]
         }
     ],
@@ -186,34 +166,73 @@
     ],
     "interests": [
         {
-            "name": "Wildlife",
+            "name": "Games",
             "keywords": [
-                "Ferrets",
-                "Unicorns"
+                "Half-Life",
+                "Portal",
+                "Mindustry",
+                "and more..."
+            ]
+        },
+        {
+            "name": "Books",
+            "keywords": [
+                "Of Human Bondage",
+                "The Stormlight Archive",
+                "HPMOR",
+                "Wildbow",
+                "and more..."
+            ]
+        },
+        {
+            "name": "Traveling",
+            "keywords": [
+                "Hiking",
+                "Trekking",
+                "Sightseeing",
+                "Food savoring"
             ]
         }
     ],
     "references": [
         {
-            "name": "Jane Doe",
-            "reference": "Reference…"
+            "name": "Ivan Larionov, LLC \"Third Pin\" CEO",
+            "reference": "..."
         }
     ],
     "projects": [
         {
-            "name": "Project",
-            "description": "Description…",
-            "highlights": [
-                "Won award at AIHacks 2016"
-            ],
+            "name": "Pastilda",
+            "summary": "Open-source hardware designed to manage our credentials in handy and secure way.",
+            "highlights": [],
             "keywords": [
-                "HTML"
+                "C++",
+                "Embedded",
+                "Open-source"
             ],
-            "startDate": "2019-01-01",
-            "endDate": "2021-01-01",
-            "url": "https://project.com/",
+            "startDate": "2016",
+            "endDate": "2017",
+            "url": "https://bitbucket.org/thirdpin_team/pastilda",
             "roles": [
-                "Team Lead"
+                "Developer"
+            ],
+            "entity": "Entity",
+            "type": "application"
+        },
+        {
+            "name": "Just Run My Debugger!",
+            "summary": "Pet project, simple GUI for OpenOCD debugger.",
+            "highlights": [],
+            "keywords": [
+                "Rust",
+                "Rescript",
+                "Tauri",
+                "React"
+            ],
+            "startDate": "2021",
+            "url": "https://github.com/ila-embsys/justrunmydebugger",
+            "roles": [
+                "Developer"
             ],
             "entity": "Entity",
             "type": "application"
