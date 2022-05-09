@@ -7,8 +7,8 @@ on:
   pull_request:
 
 env:
-  HTML_THEME: stackoverflow
-  PDF_THEME: stackoverflow
+  HTML_THEME: ./theme/jsonresume-theme-stackoverflow
+  PDF_THEME: ./theme/jsonresume-theme-stackoverflow
 
 jobs:
   deploy:
@@ -38,8 +38,8 @@ jobs:
       - name: Build resume
         run: |
           mkdir public
-          npx resumed render index.json -o public/index.html -t $HTML_THEME
-          npx resumed render index.json -o public/index.pdf.html -t $PDF_THEME
+          npx resume-cli export public/index.html -r index.json -t $HTML_THEME -d public -f html
+          npx resume-cli export public/index.pdf.html -r index.json -t $PDF_THEME -d public -f html
 
       - name: Build PDF
         uses: fifsky/html-to-pdf-action@master

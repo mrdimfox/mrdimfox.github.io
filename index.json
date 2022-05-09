@@ -66,7 +66,6 @@
             "studyType": "Master",
             "startDate": "2016",
             "endDate": "2018",
-            "gpa": "4.8",
             "courses": []
         },
         {
@@ -76,7 +75,6 @@
             "studyType": "Bachelor",
             "startDate": "2012",
             "endDate": "2016",
-            "gpa": "4.8",
             "courses": []
         }
     ],
@@ -111,7 +109,7 @@
             ]
         },
         {
-            "name": "CD/CI",
+            "name": "CI/CD",
             "level": "Intermediate",
             "keywords": [
                 "Docker",
