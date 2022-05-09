@@ -2,8 +2,6 @@ name: Deploy Resume
 
 on:
   push:
-    branches:
-      - feature/upgrade
     tags:
       - "v*.*.*"
   pull_request:
