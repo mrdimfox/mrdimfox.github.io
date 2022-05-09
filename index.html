@@ -1,779 +1,1201 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Dmitrii Lisin</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
-  <title>John Doe</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-
-  
-  <style type="text/css">
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 
 body {
-	background: #fff;
-	font-family: Lato, sans-serif;
-	font-weight: 300;
-	color: #333;
-	margin: 0 0 80px;
-	font-size: 15px;
+  line-height: 1;
 }
 
-a {
-	color: #E32B46;
+ol,
+ul {
+  list-style: none;
 }
 
-a:focus, a:hover {
-	color: #333;
-	text-decoration: none;
+blockquote,
+q {
+  quotes: none;
 }
 
-strong {
-	font-size: smaller;
-	font-weight: 400;
-	color: #333;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 13px;
+  color: #40484f;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
 }
 
 p {
-	line-height: 1.5;
-	margin: 0 0 .5em 0;
+  display: block;
 }
 
-p + p {
-	margin-top: 10px;
+a {
+  color: #0095ff;
+  text-decoration: none;
 }
 
-h1, h2, h3, h4 {
-	margin-top: 0;
-	font-weight: 300;
-	color: #555;
-}
-
-section {
-	margin-top: 24px;
-}
-
-ul, ol {
-	padding-left: 21px;
+a:hover {
+  color: #0c65a5;
+  text-decoration: underline;
 }
 
 li {
-	line-height: 1.8;
-	list-style: none;
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 1.3em;
 }
 
-li:before {
-	content: "\f052";
-	float: left;
-	font: 16px Octicons;
-	margin-top: 6px;
-	margin-left: -20px;
-	opacity: .1;
-	position: absolute;
+h1 {
+  font-size: 2rem;
 }
 
-blockquote {
-  border-left: 3px solid #e7e9ec;
-  font-size: 14px;
-  margin-bottom: 4px;
+h2 {
+  font-size: 1.67rem;
+}
+
+h3 {
+  font-size: 1.27rem;
 }
 
 em {
-	color: #666;
-	font-weight: 300;
-	font-style: normal;
+  color: #757575;
 }
 
-h4 span:first-child {
-	color: #333;
-	font-weight: 400;
+blockquote {
+  margin-bottom: 1em;
 }
 
-.container {
-	max-width: 750px;
-	padding: 0 30px;
+strong {
+  font-weight: 700;
 }
 
-.col-sm-6 {
-	margin-bottom: 10px;
+/* main container */
+
+#resume {
+  padding: 1.5rem;
 }
 
-.col-sm-12 h4 {
-	margin-top: 12px;
+/* every section wrapper */
+
+.section {
+  margin-bottom: 1rem;
 }
 
-.col-sm-12 + .col-sm-12 {
-	margin-top: 30px;
+section .location {
+  margin-right: 0.5em;
+  color: #606d76;
+  font-weight: 700;
 }
 
-#header {
-	padding: 50px 0 25px;
+#contact {
+  margin-top: 0.5rem;
 }
 
-#header h2 {
-	color: #95a5a6;
-	font-size: 24px;
+#profiles .item {
+  padding: 0;
 }
 
-#content h3 {
-	color: #555;
-	font-size: 26px;
-	margin-top: -4px;
+#header > #profiles,
+#header > #contact,
+#skills,
+#languages,
+#interests {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
 }
 
-#content aside {
-	text-align: right;
-	padding-right: 30px;
+#header > div {
+  line-height: 1.5;
 }
 
-#profiles .network {
-	text-transform: capitalize;
+#header > div > div {
+  margin-right: 1.2em;
 }
 
-#work .position,
-#volunteer .position {
-	font-weight: 400;
-	margin-bottom: 8px;
+#header h1.name {
+  font-size: 2.8rem;
+  font-weight: 100;
+  line-height: 100%;
 }
 
-#education .area {
-	font-weight: 400;
+#header h2.label {
+  color: #202931;
+  font-size: 1.47rem;
+  font-weight: 300;
 }
 
-#education .area:before {
-	content: "\f0d7";
-	font: 16px Octicons;
-	margin-right: 6px;
+#header .image {
+  width: 11em;
+  float: right;
+  border-radius: 4px;
 }
 
-#education .studyType {
-	margin-left: 25px;
+.main-summary {
+  background: #f1f8ff;
+  padding: 1.2em 1em;
+  margin-top: 1rem;
 }
 
-#awards .summary,
-#publications .summary {
-	margin-top: 8px;
+.main-summary p {
+  margin: 0;
 }
 
-#publications .website a:before {
-	content: attr(href);
+.section-title {
+  display: inline-block;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: 0.9rem;
 }
 
-@media (min-width: 480px) {
-	.strike-through {
-		border-top: 1px solid #f4f6f6;
-		height: 20px;
-		margin-top: 12px;
-		margin-bottom: -2px;
-		position: relative;
+.section > header {
+  position: relative;
+}
+
+.fa {
+  margin-right: 0.25em;
+}
+
+.section > header::after {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 1px;
+  background: #ccc;
+  content: "";
+  width: 100%;
+  z-index: -100;
+  display: block;
+}
+
+.section.main-summary > section {
+  margin: 0;
+}
+
+.section > section > header {
+  font-size: 1.38rem;
+  position: relative;
+  margin-top: 0.7em;
+}
+
+.section > section > header:first-of-type {
+  margin: 0;
+}
+
+.section > section > header .space-left {
+  position: absolute;
+  left: -1.56rem;
+  top: 5px;
+  color: #aaa;
+  line-height: 1;
+  opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+  display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+  font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+  content: "at ";
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+  color: #606d76;
+  font-weight: 400;
+}
+
+.section header .date {
+  display: block;
+  font-size: 1rem;
+  padding: 0.1em 0;
+  color: #606d76;
+  font-weight: 400;
+}
+
+.keywords,
+.courses {
+  margin: 0.5em 0;
+}
+
+.keywords li,
+.courses li {
+  display: inline-block;
+  margin: 2px 2px 2px 0;
+  padding: 4px 5px 5px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #3e6d8e;
+  background-color: #dfeaf1;
+  border: 0 solid #dfeaf1;
+  white-space: nowrap;
+}
+
+.keywords li:hover,
+.courses li:hover {
+  background: #dfeaf0;
+}
+
+.highlights {
+  margin: 1em 0 0 0;
+}
+
+.highlights > li > p {
+  margin-bottom: 0.5em;
+}
+
+.item {
+  overflow: hidden;
+}
+
+.gpa {
+  clear: both;
+  padding-bottom: 0.5em;
+}
+
+.fa.social {
+  font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+
+.google-plus {
+  color: #dd4b39;
+}
+
+.tumblr {
+  color: #32506d;
+}
+
+.foursquare {
+  color: #0072b1;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.linkedin {
+  color: #007bb6;
+}
+
+.pinterest {
+  color: #cb2027;
+}
+
+.dribbble {
+  color: #ea4c89;
+}
+
+.instagram {
+  color: #517fa4;
+}
+
+.twitter {
+  color: #00aced;
+}
+
+.soundcloud {
+  color: #ff3a00;
+}
+
+.wordpress {
+  color: #21759b;
+}
+
+.youtube {
+  color: #bb0000;
+}
+
+.github {
+  color: #171515;
+}
+
+.stack-overflow {
+  color: #828386;
+  position: relative;
+}
+
+.flickr {
+  color: #ff0084;
+}
+
+.reddit {
+  color: #ff4500;
+}
+
+.hacker-news {
+  color: #ff6600;
+}
+
+.stack-overflow::after {
+  position: absolute;
+  left: 0;
+  content: "\f16c";
+  color: #f68a1f;
+  overflow: hidden;
+  height: 100%;
+}
+
+.telegram {
+  color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+  width: 15em;
+  padding: 0 0.5em 0.5em 0;
+  border-bottom: none;
+}
+
+#skills .item {
+  width: 16em;
+}
+
+#skills .item .keywords {
+  width: 15em;
+}
+
+/* Skill chart */
+
+.level {
+  margin-bottom: 0.5em;
+}
+
+.level em {
+  padding-left: 0.2em;
+}
+
+.level .bar {
+  border: 1px solid #ddd;
+  display: block;
+  width: 10em;
+  height: 5px;
+  position: relative;
+}
+
+.level .bar::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  background: black;
+  height: 5px;
+}
+
+.level.beginner .bar::after {
+  background: #eb5f51;
+  width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+  background: #ffdf1f;
+  width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after {
+  background: #5cb85c;
+  width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after {
+  background: #59c596;
+  width: 10em;
+}
+
+#references .item {
+  padding-left: 0.5em;
+  border-left: 5px solid #ff6d1f;
+}
+
+.section > section > section {
+  margin-bottom: 0.5rem;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.display {
+  display: block;
+  opacity: 1 !important;
+}
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+  #resume {
+    width: 80%;
+    margin: 0 auto;
   }
-
-	.strike-through span,
-	.strike-through a {
-		background: #fff;
-		position: absolute;
+  .section header .date {
+    float: right;
+    font-weight: 600;
+    color: #000;
   }
-
-	.strike-through span:first-child {
-		padding-right: 20px;
-		margin-top: -12px;
-  }
-
-	.strike-through span + span {
-		font-size: 14px;
-		margin-top: -10px;
-		padding-left: 20px;
-		right: 0;
-	}
 }
 
-@media (max-width: 768px) {
-	.col-sm-6:last-child {
-		margin-bottom: 0px;
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+  li {
+    margin-left: 1.5em;
   }
-
-	#content aside {
-		margin-bottom: 20px;
-		padding-right: 0;
-		text-align: left;
+  #resume {
+    width: 820px;
+    margin: 2rem auto;
   }
-
-	#publications .website a:before {
-		content: "View publication";
-	}
-}
-
-@media (max-width: 480px) {
-	h1 {
-		font-size: 28px;
+  .section > section > header .space-left {
+    opacity: 1;
+    cursor: pointer;
   }
-
-	#header h2 {
-		font-size: 24px;
+  .section > section:not(.main-summary) {
+    margin-left: 1.67rem;
   }
-
-	#content h3 {
-		font-size: 20px;
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "| ";
   }
-
-	h4 {
-		font-size: 16px;
+  .header-left {
+    float: left;
+    width: 70%;
+    word-break: normal;
   }
-
-	.date {
-		font-size: 14px;
-		margin-bottom: 5px;
+  .section header .date {
+    padding: 0.2em;
   }
-
-	.strike-through span:first-child {
-		margin-bottom: 7px;
+  .display {
+    display: none;
   }
-
-	.strike-through span {
-		display: block;
+  .display:not(.none) {
+    display: block;
   }
-
-	#header {
-		padding: 30px 0 0;
-  }
-
-	#actions {
-		display: none;
-	}
 }
 
 @media print {
-	body {
-		font-size: 12px;
+  a:not(.hide-href-print)::after{
+    content: " (" attr(href) ") ";
   }
-
-	a[href]:after {
-		display: none;
+  #resume {
+    margin: 0.1em;
+    padding: 0.1em;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.25;
   }
-
-	h1 {
-		font-size: 24px;
+  @page {
+    margin: 1cm 1.4cm;
   }
-
-	#header h2 {
-		font-size: 18px;
-		margin-top: -8px;
+  .item-count {
+    display: none;
   }
-
-	h4 {
-		font-size: 13px;
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "at ";
   }
-
-  #header {
-		padding: 0;
-	}
-
-	#content aside {
-		margin: 0 !important;
-	}
-
-	#content h3 {
-		font-size: 16px;
-		margin-top: 0;
-	}
-
-	blockquote {
-		border: 0;
-		border-left: 3px solid #e7e9ec;
-		font-size: 12px;
-	}
-
-	li:before {
-		font: 10px Octicons;
-	}
-
-	.strike-through {
-		border-top-color: transparent;
+  .main-summary {
+    padding: 0;
+    background: transparent;
   }
-
-	.strike-through span + span {
-		font-size: 12px;
+  .section {
+    margin: 0.8rem 0;
+    padding: 0;
   }
-
-	.col-sm-push-3 {
-    left: 25%;
+  .section header {
+    padding-bottom: 0.15rem;
   }
-
-	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-    float: left;
+  .section .location {
+    padding-bottom: 0.15rem;
   }
-
-	.col-sm-12 {
-	  width: 100%;
+  .section > section > section {
+    margin: 0 0 1em 0;
   }
-
-	.col-sm-11 {
-	  width: 91.66666666666666%;
+  .section > section > section:last-of-type {
+    margin: 0;
   }
-
-	.col-sm-10 {
-	  width: 83.33333333333334%;
+  .stack-overflow::after {
+    content: "";
   }
-
-	.col-sm-9 {
-	  width: 75%;
+  .fa.social {
+    color: #828386;
   }
-
-	.col-sm-8 {
-	  width: 66.66666666666666%;
+  ul {
+    margin-top: 0.4em;
   }
-
-	.col-sm-7 {
-	  width: 58.333333333333336%;
+  ul,
+  li {
+    padding: 0;
   }
-
-	.col-sm-6 {
-	  width: 50%;
+  ul.keywords li,
+  ul.courses li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    background: transparent;
   }
-
-	.col-sm-5 {
-	  width: 41.66666666666667%;
+  ul.keywords li::after,
+  ul.courses li::after {
+    padding: 0 0 0 0.1rem;
+    content: " |";
   }
-
-	.col-sm-4 {
-	  width: 33.33333333333333%;
+  ul.keywords::before,
+  ul.courses::before {
+    font-size: 0.8rem;
+    font-weight: 600;
   }
-
-	.col-sm-3 {
-	  width: 25%;
+  #skills .item {
+    width: calc(100% / 3);
+    padding: 0;
   }
-
-	.col-sm-2 {
-	  width: 16.666666666666664%;
+  .highlights {
+    margin: 0.5em 0 0 0;
   }
-
-	.col-sm-1 {
-	  width: 8.333333333333332%;
+  ul.keywords::before {
+    content: "Skills acquired: ";
+  }
+  #skills .keywords::before {
+    content: none;
+  }
+  .section p {
+    margin: 0;
+    padding: 0;
+  }
+  ul.courses::before {
+    content: "Major courses: ";
+  }
+  ul.keywords li:last-of-type::after,
+  ul.courses li:last-of-type::after {
+    content: "";
+  }
+  .level em {
+    font-style: normal;
+    padding: 0.1em 0;
+  }
+  .level .bar {
+    display: none;
+  }
+  #profiles .item {
+    padding: 0;
+  }
+  .item.display {
+    display: block;
+    opacity: 1 !important;
+  }
+  .fa-map-marker-alt:before {
+    padding-left: 0.1em;
   }
 }
 
   </style>
   
-</head>
-<body>
-  <!-- HEADER -->
-  <header id="header">
-		<div class="container">
-			<div class="row">
-        <div class="col-sm-3">
-          <img src="" class="img-responsive img-circle pull-right" style="max-height: 88px">
+  </head>
+  <body>
+  
+  <div id="resume">
+    	<header id="header" class="clear">
+    		<img class="image" src="https://nmtuan.space/jsonresume-theme-rocketspacer/dummy-profile.png" alt="Dmitrii Lisin" />
+    		<div class="middle">
+    			<h1 class="name">Dmitrii Lisin</h1>
+    			<h2 class="label">Software Programmer, Embedded Programmer</h2>
+    		</div>
+    
+    		<span class="location">
+    			<span class="postalCode">190000,</span>
+    			<span class="city">Saint Petersburg,</span>
+    			<span class="region">Saint Petersburg</span>
+    			<span class="countryCode">RU</span>
+    		</span>
+    
+    
+    		<div id="contact">
+    			<div class="email">
+    				<span class="far fa-envelope"></span>
+    				<a class="hide-href-print" href="mailto:mrlisdim@gmail.com">mrlisdim@gmail.com</a>
+    			</div>
+    			<div class="phone">
+    				<span class="fas fa-mobile-alt"></span>
+    				<a class="hide-href-print" href="tel:8 (999) 529-5331">8 (999) 529-5331</a>
+    			</div>
+    		</div>
+    
+    		<div id="profiles">
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-twitter twitter social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://twitter.com/mrlisdim">mrlisdim</a>
+    					</span>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-github github social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://github.com/mrdimfox">mrdimfox</a>
+    					</span>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-telegram telegram social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://t.me/mrlisdim">@mrlisdim</a>
+    					</span>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-linkedin linkedin social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://www.linkedin.com/in/dmitrii-lisin/">dmitrii-lisin</a>
+    					</span>
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+    
+    	<section class="section">
+    		<section class="main-summary">
+    			<div><p>TODO</p></div>
+    		</section>
+    	</section>
+    
+    <section class="section">
+    	<header>
+    		<h2 class='section-title'>Skills</h2>
+    	</header>
+    	<section id="skills">
+    		<div class="item">
+    			<h3 class="name">
+    				Embedded Development
+    			</h3>
+    			 
+    			<div class="level master">
+    				<em>Master</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>C/C++</li>
+    				<li>Zephyr</li>
+    				<li>FreeRTOS</li>
+    				<li>STM32</li>
+    				<li>Nordic</li>
+    				<li>Real-time protocols</li>
+    				<li>Industrial protocols</li>
+    				<li>Stack only programming</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Python Development
+    			</h3>
+    			 
+    			<div class="level advanced">
+    				<em>Advanced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>FastAPI</li>
+    				<li>Pydantic</li>
+    				<li>ORM</li>
+    				<li>WAMP protocol</li>
+    				<li>Async</li>
+    				<li>Threading</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				CD/CI
+    			</h3>
+    			 
+    			<div class="level intermediate">
+    				<em>Intermediate</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Docker</li>
+    				<li>Docker Compose</li>
+    				<li>Github Actions</li>
+    				<li>Gitlab Pipelines</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Web Development
+    			</h3>
+    			 
+    			<div class="level intermediate">
+    				<em>Intermediate</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>HTML</li>
+    				<li>CSS</li>
+    				<li>JavaScript</li>
+    				<li>Typescript</li>
+    				<li>React</li>
+    				<li>Parcel</li>
+    				<li>Rollup</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Rust
+    			</h3>
+    			 
+    			<div class="level beginner">
+    				<em>Beginner</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Tauri</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Common
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>VSC</li>
+    				<li>Gitlab</li>
+    				<li>Github</li>
+    				<li>Reviewing</li>
+    				<li>Linux</li>
+    				<li>Reading schematics</li>
+    				<li>Datasheet exploring</li>
+    			</ul>
+    		</div>
+    	</section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Work Experience <span class="item-count">(2)</span></h2>
+      </header>
+    
+      <section id="work">
+        <section class="work-item">
+    
+          <label for="work-item-0"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2020</span>
+              <span class="endDate">- Current</span>
+            </div>
+            <div class="position">Team leader</div>
+            <div class="company">LLC &quot;Third Pin&quot;</div>
+          </header>
+    
+           <div class="item" id="work-item">
+            <div class="summary"><p>Developed a flexible testing system for embedded electronics based on distributed micro-services connected by PubSub/RPC Web-protocol.</p></div>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-1"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2013</span>
+              <span class="endDate">- Jan 2020</span>
+            </div>
+            <div class="position">Embedded Software Developer</div>
+            <div class="company">LLC &quot;Third Pin&quot;</div>
+          </header>
+    
+           <div class="item" id="work-item">
+            <div class="summary"><p>Have been finished more than 20 commercial projects in embedded area including IoT, safety systems, shipbuilding.</p></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Projects <span class="item-count">(2)</span></h2>
+      </header>
+      <section id="projects">
+        <section class="project-item">
+            <label for="project-item-0"></label>
+    
+          <header class="clear">
+            <div class="position">Pastilda</div>
+            <div class="date">
+              <span class="startDate">Jan 2016</span>
+              <span class="endDate">- Jan 2017</span>
+            </div>
+          </header>
+          <span class="website">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://bitbucket.org/thirdpin_team/pastilda">https://bitbucket.org/thirdpin_team/pastilda</a>
+          </span>
+          <ul class="keywords">
+              <li>C++</li>
+              <li>Embedded</li>
+              <li>Open-source</li>
+          </ul>
+          <div class="item">
+              <div class="summary"><p>Open-source hardware designed to manage our credentials in handy and secure way.</p></div>
+          </div>
+        </section>
+        <section class="project-item">
+            <label for="project-item-1"></label>
+    
+          <header class="clear">
+            <div class="position">Just Run My Debugger!</div>
+            <div class="date">
+              <span class="startDate">Jan 2021</span>
+              <span class="endDate">- Current</span>
+            </div>
+          </header>
+          <span class="website">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://github.com/ila-embsys/justrunmydebugger">https://github.com/ila-embsys/justrunmydebugger</a>
+          </span>
+          <ul class="keywords">
+              <li>Rust</li>
+              <li>Rescript</li>
+              <li>Tauri</li>
+              <li>React</li>
+          </ul>
+          <div class="item">
+              <div class="summary"><p>Pet project, simple GUI for OpenOCD debugger.</p></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Education <span class="item-count">(2)</span></h2>
+      </header>
+    
+      <section id="education">
+        <section class="education-item">
+          <header class="clear">
+            <div class="header-left">
+              <div class="studyType">
+                Master
+              </div>
+              <div class="area">
+                Intelligent Technologies in Robotics
+              </div>
+              <div class="institution">
+                ITMO University
+              </div>
+            </div>
+            <div class="date">
+              <span class="startDate">
+              2016
+              </span>
+              <span class="endDate">
+              - 2018
+              </span>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+            <div class='gpa'>
+              <strong> Grade:</strong> <span>4.8</span>
+            </div>
+          </div>
+        </section>
+        <section class="education-item">
+          <header class="clear">
+            <div class="header-left">
+              <div class="studyType">
+                Bachelor
+              </div>
+              <div class="area">
+                Intelligent Technologies in Robotics
+              </div>
+              <div class="institution">
+                ITMO University
+              </div>
+            </div>
+            <div class="date">
+              <span class="startDate">
+              2012
+              </span>
+              <span class="endDate">
+              - 2016
+              </span>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+            <div class='gpa'>
+              <strong> Grade:</strong> <span>4.8</span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Languages</h2>
+      </header>
+      <section id="languages">
+        <div class="display">
+          <h3 class="language">
+            English
+          </h3>
+          <div class="item">
+            <div class="level fluency fluent">
+              <em>Fluent</em>
+              <div class="bar"></div>
+            </div>
+          </div>
         </div>
-				<div class="col-sm-9">
-          <h1>John Doe</h1>
-          <h2>Programmer</h2>
-				</div>
-			</div>
-		</div>
-	</header>
-
-  <!-- CONTENT: Re-arrange sections order if necessary -->
-  <div id="content" class="container">
-    <!-- About -->
-    
-
-
-  <section id="about" class="row">
-    <aside class="col-sm-3">
-      <h3>About</h3>
-    </aside>
-    <div class="col-sm-9">
-      <p>A summary of John Doe</p>
-    </div>
-  </section>
-
-
-    <!-- Contact -->
-    
-
-
-  <section id="contact" class="row">
-    <aside class="col-sm-3"><h3>Contact</h3></aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-6">
-            <strong>Email</strong>
-            <div>
-              <a href="mailto:john@gmail.com">john@gmail.com</a>
+        <div class="display">
+          <h3 class="language">
+            Russian
+          </h3>
+          <div class="item">
+            <div class="level fluency native speaker">
+              <em>Native Speaker</em>
+              <div class="bar"></div>
             </div>
           </div>
-        
-        
-          <div class="col-sm-6">
-            <strong>Phone</strong>
-            <br>
-            <a href="tel:(912) 555-4321">(912) 555-4321</a>
+        </div>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title' class='section-title'>Interests</h2>
+      </header>
+      <section id="interests">
+        <div class="item">
+          <h3 class="name">
+            Games
+          </h3>
+          <ul class="keywords">
+            <li>Half-Life</li>
+            <li>Portal</li>
+            <li>Mindustry</li>
+            <li>and more...</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Books
+          </h3>
+          <ul class="keywords">
+            <li>Of Human Bondage</li>
+            <li>The Stormlight Archive</li>
+            <li>HPMOR</li>
+            <li>Wildbow</li>
+            <li>and more...</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Traveling
+          </h3>
+          <ul class="keywords">
+            <li>Hiking</li>
+            <li>Trekking</li>
+            <li>Sightseeing</li>
+            <li>Food savoring</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>References</h2>
+      </header>
+      <section id="references">
+        <div class="item">
+          <blockquote class="reference">
+            &#8220;&#32;...&#32;&#8221;
+          </blockquote>
+          <div class="name">
+            Ivan Larionov, LLC &quot;Third Pin&quot; CEO
           </div>
-        
-        
-        
-      </div>
-    </div>
-  </section>
+        </div>
+      </section>
+    </section>
 
-
-    <!-- Profiles -->
-    
-
-
-  <section id="profiles" class="row">
-    <aside class="col-sm-3">
-      <h3>Profiles</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-6">
-            <strong class="network">Twitter</strong>
-            <div class="url">
-              <a target="_blank" href="https://twitter.com/john">john</a>
-            </div>
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-
-    <!-- Skills -->
-    
-
-
-  <section id="skills" class="row">
-    <aside class="col-sm-3">
-      <h3>Skills</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-4">
-            <div class="name">
-              <h4>Web Development</h4>
-            </div>
-            
-              <ul class="keywords">
-                
-                  <li>HTML</li>
-                
-                  <li>CSS</li>
-                
-                  <li>JavaScript</li>
-                
-              </ul>
-            
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-
-    <!-- Work -->
-    
-
-
-  <section id="work" class="row">
-    <aside class="col-sm-3">
-      <h3>Work</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-12">
-            <h4 class="strike-through">
-              <span>Company</span>
-              <span class="date">
-                
-                  January 2013 — January 2014
-                
-              </span>
-            </h4>
-            <div class="position">
-              President
-            </div>
-            <div class="summary">
-              <p>Description…</p>
-            </div>
-            
-              <ul class="highlights">
-                
-                  <li class="bullet">Started the company</li>
-                
-              </ul>
-            
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-
-    <!-- Education -->
-    
-
-
-  <section id="education" class="row">
-    <aside class="col-sm-3">
-      <h3>Education</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-12">
-            <h4 class="strike-through">
-              <span>University</span>
-              <span class="date">
-                2011 — 2013
-              </span>
-            </h4>
-            <div class="area">Software Development</div>
-            <div class="studyType">
-              Bachelor
-              
-                (4.0)
-              
-            </div>
-            
-              <h4>Courses</h4>
-              
-                <ul class="courses">
-                  <li>DB1101 - Basic SQL</li>
-                </ul>
-              
-            
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-
-    <!-- Certifications -->
-    
-
-
-
-    <!-- Projects -->
-    
-
-
-  <section id="work" class="row">
-    <aside class="col-sm-3">
-      <h3>Projects</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-12">
-            <h4 class="strike-through">
-              <span>Project</span>
-            </h4>
-            <div class="website pull-left">
-              <a target="_blank" href="https://project.com/">https://project.com/</a>
-            </div>
-            <br>
-            <div class="summary">
-              <p></p>
-            </div>
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-
-    <!-- Awards -->
-    
-
-
-  <section id="awards" class="row">
-    <aside class="col-sm-3">
-      <h3>Awards</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-12">
-            <h4 class="strike-through">
-              <span>Award</span>
-            </h4>
-            <div class="date pull-right">
-              <em>Awarded</em>
-              November 2014
-            </div>
-            <div>
-              <em>at</em>
-              <strong>Company</strong>
-            </div>
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-
-
-    <!-- Volunteer -->
-    
-
-
-  <section id="volunteer" class="row">
-    <aside class="col-sm-3">
-      <h3>Volunteer</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-12">
-            <h4 class="strike-through">
-              <span>Organization</span>
-              <span class="date">
-                January 2012 — January 2013
-              </span>
-            </h4>
-            <div class="website pull-right">
-              <a target="_blank" href=""></a>
-            </div>
-            <div class="position">
-              Volunteer
-            </div>
-            <div class="summary">
-              <p>Description…</p>
-            </div>
-            
-              <p>
-                <strong>Highlights</strong>
-              </p>
-              <ul class="highlights">
-                
-                  <li class="bullet">Awarded &#39;Volunteer of the Month&#39;</li>
-                
-              </ul>
-            
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-
-    <!-- Publications -->
-    
-
-
-  <section id="publications" class="row">
-    <aside class="col-sm-3">
-      <h3>Publications</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-12">
-            <h4 class="strike-through">
-              <span>Publication</span>
-              <span class="date">October 2014</span>
-            </h4>
-            <div class="website pull-right">
-              <a target="_blank" href=""></a>
-            </div>
-            <div class="publisher">
-              <em>Published by</em>
-              <strong>Company</strong>
-            </div>
-            <div class="summary">
-              <p>Description…</p>
-            </div>
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-
-    <!-- Languages -->
-    
-
-
-  <section id="languages" class="row">
-    <aside class="col-sm-3">
-      <h3>Languages</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-6">
-            <div class="language"><strong></strong></div>
-            <div class="fluency"></div>
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-
-    <!-- Interests -->
-    
-
-
-  <section id="interests" class="row">
-    <aside class="col-sm-3">
-      <h3>Interests</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-6">
-            <div class="name">
-              <h4>Wildlife</h4>
-            </div>
-            <ul class="keywords">
-              
-                <li>Ferrets</li>
-              
-                <li>Unicorns</li>
-              
-            </ul>
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-
-    <!-- References -->
-    
-
-
-  <section id="references" class="row">
-    <aside class="col-sm-3">
-      <h3>References</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        
-          <div class="col-sm-11">
-            <p>Reference…</p>
-            <p class="name">
-              <strong>— Jane Doe</strong></p>
-            </p>
-            <br>
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-
-  </div>
-</body>
+  </body>
 </html>
