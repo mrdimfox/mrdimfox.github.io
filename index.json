@@ -111,7 +111,7 @@
             ]
         },
         {
-            "name": "CD/CI",
+            "name": "CI/CD",
             "level": "Intermediate",
             "keywords": [
                 "Docker",
