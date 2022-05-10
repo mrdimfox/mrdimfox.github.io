@@ -1715,10 +1715,8 @@ jsonresume-theme-even@^0.6.0:
     micromark "^2.11.4"
     striptags "^3.1.1"
 
-jsonresume-theme-stackoverflow@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/jsonresume-theme-stackoverflow/-/jsonresume-theme-stackoverflow-2.0.0.tgz#c335f6799343b3a79767d045b8921e4c8d72afbc"
-  integrity sha512-SsKzZPodhgT9by3osxOUa6GfFBMxVzuMWhoOAbGWppEY1fPJ2PgwVbgdFX0flgUugQNz1+ypCdu/5zjs9Tz0bg==
+"jsonresume-theme-stackoverflow-fixed@file:./theme/jsonresume-theme-stackoverflow-fixed":
+  version "1.0.0"
   dependencies:
     handlebars "^4.7.7"
     moment "^2.29.2"

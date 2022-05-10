@@ -5,6 +5,7 @@
     "author": "Lisin D. <mrlisdim@gmail.com>",
     "license": "MIT",
     "dependencies": {
-        "resume-cli": "^3.0.7"
+        "resume-cli": "^3.0.7",
+        "jsonresume-theme-stackoverflow-fixed": "file:./theme/jsonresume-theme-stackoverflow-fixed"
     }
 }

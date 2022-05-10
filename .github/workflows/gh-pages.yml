@@ -7,8 +7,8 @@ on:
   pull_request:
 
 env:
-  HTML_THEME: ./theme/jsonresume-theme-stackoverflow
-  PDF_THEME: ./theme/jsonresume-theme-stackoverflow
+  HTML_THEME: stackoverflow-fixed
+  PDF_THEME: stackoverflow-fixed
 
 jobs:
   deploy:
