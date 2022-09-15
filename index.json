@@ -6,8 +6,8 @@
         "image": "https://nmtuan.space/jsonresume-theme-rocketspacer/dummy-profile.png",
         "email": "mrlisdim@gmail.com",
         "phone": "8 (999) 529-5331",
-        "url": "http://dlisin.tk",
-        "summary": "TODO",
+        "url": "https://dlisin.tk",
+        "summary": "Since childhood, I'm in love with programming. Started my carer as an intern in an electronics design company, I found out that I love to create something that works in real life, not just inside my computer. Have finished a lot of embedded projects from different spheres and had deal with a numerous of instruments, protocols and peripherals. Has always been intended to write only high quality and human-readable code. Had an experience as a team leader, but prefer to work as an equal part of team.",
         "location": {
             "address": "",
             "postalCode": "190000",
@@ -45,7 +45,11 @@
             "url": "https://en.thirdpin.io/",
             "startDate": "2020",
             "summary": "Developed a flexible testing system for embedded electronics based on distributed micro-services connected by PubSub/RPC Web-protocol.",
-            "highlights": []
+            "highlights": [
+                "Robster: flexible testing system for electronic devices (Python, WAMP, Microservice, Docker, PostgreSQL)",
+                "Gate valve controller (ARM, STM32, Zephyr, Modbus)",
+                "GPS tracker for a professional training (ARM, Nordic, GPS, UBlox, Ant)"
+            ]
         },
         {
             "name": "LLC \"Third Pin\"",
@@ -54,7 +58,12 @@
             "startDate": "2013-01-01",
             "endDate": "2020",
             "summary": "Have been finished more than 20 commercial projects in embedded area including IoT, safety systems, shipbuilding.",
-            "highlights": []
+            "highlights": [
+                "Pastilda: hardware password manager (STM32, ARM, Crypto Peripheral, SDIO, FatFS, FreeRTOS)",
+                "Ship ruder control system (ARM, STM32, USB HID, FreeRTOS)",
+                "Fire alarm system (ARM, STM32)",
+                "MTUTA: Telemetry of vending machines (ARM, FreeRTOS, USB, SD, SIMCom, GSM, Ethernet, FTP)"
+            ]
         }
     ],
     "volunteer": [],
@@ -165,31 +174,19 @@
     "interests": [
         {
             "name": "Games",
-            "keywords": [
-                "Half-Life",
-                "Portal",
-                "Mindustry",
-                "and more..."
-            ]
+            "keywords": []
         },
         {
             "name": "Books",
-            "keywords": [
-                "Of Human Bondage",
-                "The Stormlight Archive",
-                "HPMOR",
-                "Wildbow",
-                "and more..."
-            ]
+            "keywords": []
         },
         {
             "name": "Traveling",
-            "keywords": [
-                "Hiking",
-                "Trekking",
-                "Sightseeing",
-                "Food savoring"
-            ]
+            "keywords": []
+        },
+        {
+            "name": "Hobby programming",
+            "keywords": []
         }
     ],
     "references": [
