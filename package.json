@@ -1,11 +1,12 @@
 {
     "name": "personal-site",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "repository": "git@github.com:mrdimfox/mrdimfox.github.io.git",
     "author": "Lisin D. <mrlisdim@gmail.com>",
     "license": "MIT",
     "dependencies": {
         "resume-cli": "^3.0.7",
+        "jsonresume-theme-short": "^0.1.7",
         "jsonresume-theme-stackoverflow-fixed": "file:./theme/jsonresume-theme-stackoverflow-fixed"
     }
 }

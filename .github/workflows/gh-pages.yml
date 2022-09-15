@@ -8,7 +8,8 @@ on:
 
 env:
   HTML_THEME: stackoverflow-fixed
-  PDF_THEME: stackoverflow-fixed
+  PDF_THEME_1: stackoverflow-fixed
+  PDF_THEME_2: short
 
 jobs:
   deploy:
@@ -39,13 +40,21 @@ jobs:
         run: |
           mkdir public
           npx resume-cli export public/index.html -r index.json -t $HTML_THEME -d public -f html
-          npx resume-cli export public/index.pdf.html -r index.json -t $PDF_THEME -d public -f html
+          npx resume-cli export public/index.1.pdf.html -r index.json -t $PDF_THEME_1 -d public -f html
+          npx resume-cli export public/index.2.pdf.html -r index.json -t $PDF_THEME_2 -d public -f html
 
-      - name: Build PDF
+      - name: Build PDF, Variant 1
         uses: fifsky/html-to-pdf-action@master
         with:
-          htmlFile: ./public/index.pdf.html
-          outputFile: ./public/resume.pdf
+          htmlFile: ./public/index.1.pdf.html
+          outputFile: ./public/resume.1.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+
+      - name: Build PDF, Variant 2
+        uses: fifsky/html-to-pdf-action@master
+        with:
+          htmlFile: ./public/index.2.pdf.html
+          outputFile: ./public/resume.2.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
       - name: Deploy Pages
@@ -62,5 +71,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: resume.pdf
-          path: ./public/resume.pdf
-          retention-days: 5
+          path: ./public/resume.?.pdf
+          retention-days: 30
