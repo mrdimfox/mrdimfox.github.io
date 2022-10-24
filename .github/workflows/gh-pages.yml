@@ -51,8 +51,8 @@ jobs:
 
       - name: Build PDF with gotenberg
         run: |
-          bash convert.sh public/index.pdf.html public/index.pdf
-          bash convert.sh public/index.embedded.pdf.html public/index.embedded.pdf
+          bash convert.sh public/index.pdf.html public/resume.pdf
+          bash convert.sh public/index.embedded.pdf.html public/resume.embedded.pdf
 
       - name: Deploy Pages
         uses: peaceiris/actions-gh-pages@v3
