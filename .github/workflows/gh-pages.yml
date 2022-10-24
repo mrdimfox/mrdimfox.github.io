@@ -42,12 +42,18 @@ jobs:
           npx resume-cli export public/index.pdf.html -r resume_common.json -t $PDF_THEME -d public -f html
           npx resume-cli export public/index.embedded.pdf.html -r resume_embedded.json -t $PDF_THEME -d public -f html
 
-      - name: Build PDF
-        uses: fifsky/html-to-pdf-action@master
+      # - name: Build PDF
+      #   uses: fifsky/html-to-pdf-action@master
+      #   with:
+      #     htmlFile: ./public/index.pdf.html
+      #     outputFile: ./public/resume.pdf
+      #     pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+
+      - name: Build PDF with gotenberg
         with:
-          htmlFile: ./public/index.pdf.html
-          outputFile: ./public/resume.pdf
-          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+          run: |
+            bash convert.sh ./public/index.pdf.html ./public/index.pdf
+            bash convert.sh ./index.embedded.pdf.html ./public/index.embedded.pdf
 
       - name: Deploy Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -63,5 +69,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: resume.pdf
-          path: ./public/resume.pdf
+          path: ./public/resume.*.pdf
           retention-days: 30
