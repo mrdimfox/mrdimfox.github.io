@@ -50,10 +50,9 @@ jobs:
       #     pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
       - name: Build PDF with gotenberg
-        with:
-          run: |
-            bash convert.sh ./public/index.pdf.html ./public/index.pdf
-            bash convert.sh ./index.embedded.pdf.html ./public/index.embedded.pdf
+        run: |
+          bash convert.sh ./public/index.pdf.html ./public/index.pdf
+          bash convert.sh ./index.embedded.pdf.html ./public/index.embedded.pdf
 
       - name: Deploy Pages
         uses: peaceiris/actions-gh-pages@v3
