@@ -8,5 +8,11 @@
         "resume-cli": "^3.0.7",
         "jsonresume-theme-short": "^0.1.7",
         "jsonresume-theme-stackoverflow-fixed": "file:./theme/jsonresume-theme-stackoverflow-fixed"
+    },
+    "scripts": {
+        "embedded_pdf": "npx resume-cli export public/index.pdf -r resume_embedded.json -t stackoverflow-fixed -d public -f pdf",
+        "python_pdf": "npx resume-cli export public/index.pdf -r resume_python.json -t stackoverflow-fixed -d public -f pdf",
+        "embedded_html": "npx resume-cli export public/index.pdf.html -r resume_embedded.json -t stackoverflow-fixed -d public -f html",
+        "python_html": "npx resume-cli export public/index.pdf.html -r resume_python.json -t stackoverflow-fixed -d public -f html"
     }
 }
