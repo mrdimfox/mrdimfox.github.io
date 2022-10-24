@@ -7,13 +7,13 @@
         "email": "mrlisdim@gmail.com",
         "phone": "8 (999) 529-5331",
         "url": "https://dlisin.tk",
-        "summary": "Since childhood, I've been in love with programming. When I began my career as an intern at an electronics design firm, I discovered that I enjoyed creating something that worked in real life rather than just inside my computer. I have finished a lot of embedded projects from different spheres and dealt with numerous instruments, protocols, and peripherals. It has always been my intention to write only high-quality, human-readable code. Had prior team leadership experience, but preferred to work as an equal member of the team. In my free time, I also prefer to extend my knowledge of programming languages, techniques, and trends by working with hobby projects.",
+        "summary": "I began my career as an intern at an electronics design firm, I discovered that I enjoyed creating something that worked in real life rather than just inside my computer. I have finished a lot of embedded projects from different spheres and dealt with numerous instruments, protocols, and peripherals. It has always been my intention to write only high-quality, human-readable code. Had prior team leadership experience, but preferred to work as an equal member of the team. In my free time, I also prefer to extend my knowledge of programming languages, techniques, and trends by working with hobby projects.",
         "location": {
             "address": "",
-            "postalCode": "190000",
-            "city": "Saint Petersburg",
-            "countryCode": "RU",
-            "region": "Saint Petersburg"
+            "postalCode": "0035",
+            "city": "Yerevan",
+            "countryCode": "AM",
+            "region": "Yerevan"
         },
         "profiles": [
             {
@@ -92,6 +92,30 @@
     "publications": [],
     "skills": [
         {
+            "name": "Python Development",
+            "level": "Advanced",
+            "keywords": [
+                "FastAPI",
+                "Pydantic",
+                "ORM",
+                "WAMP protocol",
+                "Async",
+                "Threading"
+            ]
+        },
+        {
+            "name": "C++ Development",
+            "level": "master",
+            "keywords": [
+                "CMake",
+                "Make",
+                "STL",
+                "Concepts",
+                "C++17",
+                "C++20"
+            ]
+        },
+        {
             "name": "Embedded Development",
             "level": "Master",
             "keywords": [
@@ -103,18 +127,6 @@
                 "Real-time protocols",
                 "Industrial protocols",
                 "Stack only programming"
-            ]
-        },
-        {
-            "name": "Python Development",
-            "level": "Advanced",
-            "keywords": [
-                "FastAPI",
-                "Pydantic",
-                "ORM",
-                "WAMP protocol",
-                "Async",
-                "Threading"
             ]
         },
         {
@@ -141,6 +153,16 @@
             ]
         },
         {
+            "name": "Databases",
+            "level": "Intermediate",
+            "keywords": [
+                "PostgreSQL",
+                "SQLAlchemy",
+                "PonyORM",
+                "SQL"
+            ]
+        },
+        {
             "name": "Rust",
             "level": "Beginner",
             "keywords": [
@@ -151,7 +173,7 @@
             "name": "Common",
             "level": "",
             "keywords": [
-                "VSC",
+                "Git",
                 "Gitlab",
                 "Github",
                 "Reviewing",
@@ -186,7 +208,11 @@
         },
         {
             "name": "Hobby programming",
-            "keywords": []
+            "keywords": [
+                "Typescript",
+                "Rust",
+                "Rescript"
+            ]
         }
     ],
     "references": [],
