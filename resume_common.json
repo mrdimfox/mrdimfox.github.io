@@ -1,0 +1,257 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+    "basics": {
+        "name": "Dmitrii Lisin",
+        "label": "Software Programmer, Embedded Programmer",
+        "image": "https://raw.githubusercontent.com/mrdimfox/mrdimfox.github.io/master/assets/avatar.jpg",
+        "email": "mrlisdim@gmail.com",
+        "phone": "8 (999) 529-5331",
+        "url": "https://dlisin.tk",
+        "summary": "I'm a software engineer with a various spheres I specialized in. \n → Embedded C/C++: I began my career as an intern at an electronics design firm. I have finished a lot of embedded projects in different spheres and have dealt with numerous MCUs, instruments, protocols, and peripherals.\n → Python: Besides that, I have worked on a large Python project based on distributed micro-services connected by PubSub/RPC Web-protocol during which I had prior team leadership experience. \n → It has always been my intention to write only high-quality, human-readable code. \n → In my free time, I also prefer to extend my knowledge of programming languages, techniques, and trends by working on hobby projects.",
+        "location": {
+            "address": "",
+            "postalCode": "0035",
+            "city": "Yerevan",
+            "countryCode": "AM",
+            "region": "Yerevan"
+        },
+        "profiles": [
+            {
+                "network": "Twitter",
+                "username": "mrlisdim",
+                "url": "https://twitter.com/mrlisdim"
+            },
+            {
+                "network": "Github",
+                "username": "mrdimfox",
+                "url": "https://github.com/mrdimfox"
+            },
+            {
+                "network": "Telegram",
+                "username": "@mrlisdim",
+                "url": "https://t.me/mrlisdim"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "dmitrii-lisin",
+                "url": "https://www.linkedin.com/in/dmitrii-lisin/"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "LLC \"Third Pin\"",
+            "position": "Team leader",
+            "url": "https://en.thirdpin.io/",
+            "startDate": "2020",
+            "summary": "Developed a flexible testing system for embedded electronics based on distributed micro-services connected by PubSub/RPC Web-protocol.",
+            "highlights": [
+                "Robster: flexible testing system for electronic devices (Python, WAMP, Microservice, Docker, PostgreSQL)",
+                "Gate valve controller (ARM, STM32, Zephyr, Modbus)",
+                "GPS tracker for a professional training (ARM, Nordic, GPS, UBlox, Ant)"
+            ]
+        },
+        {
+            "name": "LLC \"Third Pin\"",
+            "position": "Embedded Software Developer",
+            "url": "https://en.thirdpin.io/",
+            "startDate": "2013-01-01",
+            "endDate": "2020",
+            "summary": "Have been finished more than 20 commercial projects in embedded area including IoT, safety systems, shipbuilding.",
+            "highlights": [
+                "Pastilda: hardware password manager (STM32, ARM, Crypto Peripheral, SDIO, FatFS, FreeRTOS)",
+                "Ship ruder control system (ARM, STM32, USB HID, FreeRTOS)",
+                "Fire alarm system (ARM, STM32)",
+                "MTUTA: Telemetry of vending machines (ARM, FreeRTOS, USB, SD, SIMCom, GSM, Ethernet, FTP)"
+            ]
+        }
+    ],
+    "volunteer": [],
+    "education": [
+        {
+            "institution": "ITMO University",
+            "url": "https://en.itmo.ru/",
+            "area": "Intelligent Technologies in Robotics",
+            "studyType": "Master",
+            "startDate": "2016",
+            "endDate": "2018",
+            "courses": []
+        },
+        {
+            "institution": "ITMO University",
+            "url": "https://en.itmo.ru/",
+            "area": "Intelligent Technologies in Robotics",
+            "studyType": "Bachelor",
+            "startDate": "2012",
+            "endDate": "2016",
+            "courses": []
+        }
+    ],
+    "awards": [],
+    "certificates": [],
+    "publications": [],
+    "skills": [
+        {
+            "name": "Python Development",
+            "level": "Advanced",
+            "keywords": [
+                "FastAPI",
+                "Pydantic",
+                "ORM",
+                "WAMP protocol",
+                "Async",
+                "Threading"
+            ]
+        },
+        {
+            "name": "C++ Development",
+            "level": "master",
+            "keywords": [
+                "CMake",
+                "Make",
+                "STL",
+                "Concepts",
+                "C++17",
+                "C++20"
+            ]
+        },
+        {
+            "name": "Embedded Development",
+            "level": "Master",
+            "keywords": [
+                "C/C++",
+                "Zephyr",
+                "FreeRTOS",
+                "STM32",
+                "Nordic",
+                "Real-time protocols",
+                "Industrial protocols",
+                "Stack only programming"
+            ]
+        },
+        {
+            "name": "CI/CD",
+            "level": "Intermediate",
+            "keywords": [
+                "Docker",
+                "Docker Compose",
+                "Github Actions",
+                "Gitlab Pipelines"
+            ]
+        },
+        {
+            "name": "Web Development",
+            "level": "Intermediate",
+            "keywords": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Typescript",
+                "React",
+                "Parcel",
+                "Rollup"
+            ]
+        },
+        {
+            "name": "Databases",
+            "level": "Intermediate",
+            "keywords": [
+                "PostgreSQL",
+                "SQLAlchemy",
+                "PonyORM",
+                "SQL"
+            ]
+        },
+        {
+            "name": "Rust",
+            "level": "Beginner",
+            "keywords": [
+                "Tauri"
+            ]
+        },
+        {
+            "name": "Common",
+            "level": "",
+            "keywords": [
+                "Git",
+                "Gitlab",
+                "Github",
+                "Reviewing",
+                "Linux",
+                "Reading schematics",
+                "Datasheet exploring"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Fluent"
+        },
+        {
+            "language": "Russian",
+            "fluency": "Native Speaker"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Games",
+            "keywords": []
+        },
+        {
+            "name": "Books",
+            "keywords": []
+        },
+        {
+            "name": "Traveling",
+            "keywords": []
+        },
+        {
+            "name": "Hobby programming",
+            "keywords": [
+                "Rust",
+                "Typescript",
+                "Rescript"
+            ]
+        }
+    ],
+    "references": [],
+    "projects": [
+        {
+            "name": "Pastilda",
+            "summary": "Open-source hardware designed to manage our credentials in handy and secure way.",
+            "highlights": [],
+            "keywords": [
+                "C++",
+                "Embedded",
+                "Open-source"
+            ],
+            "startDate": "2016",
+            "endDate": "2017",
+            "url": "https://bitbucket.org/thirdpin_team/pastilda",
+            "roles": [
+                "Developer"
+            ],
+            "entity": "Entity",
+            "type": "application"
+        },
+        {
+            "name": "Just Run My Debugger!",
+            "summary": "Pet project, simple GUI for OpenOCD debugger.",
+            "highlights": [],
+            "keywords": [
+                "Rust",
+                "Rescript",
+                "Tauri",
+                "React"
+            ],
+            "startDate": "2021",
+            "url": "https://github.com/ila-embsys/justrunmydebugger",
+            "roles": [
+                "Developer"
+            ],
+            "entity": "Entity",
+            "type": "application"
+        }
+    ]
+}

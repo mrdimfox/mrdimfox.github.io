@@ -11,8 +11,8 @@
     },
     "scripts": {
         "embedded_pdf": "npx resume-cli export public/index.pdf -r resume_embedded.json -t stackoverflow-fixed -d public -f pdf",
-        "python_pdf": "npx resume-cli export public/index.pdf -r resume_python.json -t stackoverflow-fixed -d public -f pdf",
+        "common_pdf": "npx resume-cli export public/index.pdf -r resume_common.json -t stackoverflow-fixed -d public -f pdf",
         "embedded_html": "npx resume-cli export public/index.pdf.html -r resume_embedded.json -t stackoverflow-fixed -d public -f html",
-        "python_html": "npx resume-cli export public/index.pdf.html -r resume_python.json -t stackoverflow-fixed -d public -f html"
+        "common_html": "npx resume-cli export public/index.pdf.html -r resume_common.json -t stackoverflow-fixed -d public -f html"
     }
 }
