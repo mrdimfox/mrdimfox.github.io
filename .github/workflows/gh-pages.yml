@@ -39,9 +39,9 @@ jobs:
       - name: Build resume
         run: |
           mkdir public
-          npx resume-cli export public/index.html -r index.json -t $HTML_THEME -d public -f html
-          npx resume-cli export public/index.1.pdf.html -r index.json -t $PDF_THEME_1 -d public -f html
-          npx resume-cli export public/index.2.pdf.html -r index.json -t $PDF_THEME_2 -d public -f html
+          npx resume-cli export public/index.html -r resume_embedded.json -t $HTML_THEME -d public -f html
+          npx resume-cli export public/index.1.pdf.html -r resume_embedded.json -t $PDF_THEME_1 -d public -f html
+          npx resume-cli export public/index.2.pdf.html -r resume_embedded.json -t $PDF_THEME_2 -d public -f html
 
       - name: Build PDF, Variant 1
         uses: fifsky/html-to-pdf-action@master
