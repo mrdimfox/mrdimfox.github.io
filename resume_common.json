@@ -10,7 +10,7 @@
         "summary": "I'm a software engineer with a various spheres I specialized in. \n → Embedded C/C++: I began my career as an intern at an electronics design firm. I have finished a lot of embedded projects in different spheres and have dealt with numerous MCUs, instruments, protocols, and peripherals.\n → Python: Besides that, I have worked on a large Python project based on distributed micro-services connected by PubSub/RPC Web-protocol during which I had prior team leadership experience. \n → It has always been my intention to write only high-quality, human-readable code. \n → In my free time, I also prefer to extend my knowledge of programming languages, techniques, and trends by working on hobby projects.",
         "location": {
             "address": "",
-            "postalCode": "0035",
+            "postalCode": "0052",
             "city": "Yerevan",
             "countryCode": "AM",
             "region": "Yerevan"
@@ -40,10 +40,19 @@
     },
     "work": [
         {
+            "name": "BostonGene",
+            "position": "Software engineer",
+            "url": "https://bostongene.com/",
+            "startDate": "2022",
+            "summary": "Support and enhance a complex Python backend that provides an environment for bioinformatics pipelines to calculate.",
+            "highlights": []
+        },
+        {
             "name": "LLC \"Third Pin\"",
             "position": "Team leader",
             "url": "https://en.thirdpin.io/",
             "startDate": "2020",
+            "endDate": "2022",
             "summary": "Developed a flexible testing system for embedded electronics based on distributed micro-services connected by PubSub/RPC Web-protocol.",
             "highlights": [
                 "Robster: flexible testing system for electronic devices (Python, WAMP, Microservice, Docker, PostgreSQL)",
